@@ -1,6 +1,7 @@
 package com.example.spoleto.model;
 
 import com.example.spoleto.dto.SaveProductDTO;
+import com.example.spoleto.dto.SaveProductStockDTO;
 import com.example.spoleto.model.enums.ProductType;
 import jakarta.persistence.*;
 import lombok.*;
@@ -25,5 +26,11 @@ public class Product {
         this.price = saveProductDTO.price();
         this.name = saveProductDTO.name();
         this.productType = saveProductDTO.productType();
+    }
+
+    public Product(SaveProductStockDTO saveProductStockDTO) {
+        this.name = saveProductStockDTO.name();
+        this.price = "";
+        this.productType = saveProductStockDTO.productType();
     }
 }
