@@ -14,13 +14,8 @@ public class StockService {
     @Autowired
     private StockRepository stockRepository;
 
-    @Autowired
-    private ProductRepository productRepository;
-
     public SaveProductStockDTO saveStockProduct(@RequestBody SaveProductStockDTO saveProductStockDTO) {
-        Product newProduct = new Product(saveProductStockDTO);
-        productRepository.save(newProduct);
-        Stock newProductStock = new Stock(saveProductStockDTO, newProduct);
+        Stock newProductStock = new Stock(saveProductStockDTO);
         stockRepository.save(newProductStock);
         return saveProductStockDTO;
     }

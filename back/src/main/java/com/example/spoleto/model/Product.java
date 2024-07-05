@@ -20,18 +20,9 @@ public class Product {
     @Column(name = "name", nullable = false, unique = true)
     private String name;
     private String price;
-    @Enumerated(EnumType.STRING)
-    private ProductType productType;
 
     public Product(SaveProductDTO saveProductDTO) {
         this.price = saveProductDTO.price();
         this.name = saveProductDTO.name();
-        this.productType = saveProductDTO.productType();
-    }
-
-    public Product(SaveProductStockDTO saveProductStockDTO) {
-        this.name = saveProductStockDTO.name();
-        this.price = "0.00";
-        this.productType = saveProductStockDTO.productType();
     }
 }

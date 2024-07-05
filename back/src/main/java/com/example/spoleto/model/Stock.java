@@ -12,19 +12,18 @@ import lombok.*;
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
 public class Stock {
-
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @OneToOne
-    @JoinColumn(name = "product_id")
-    @MapsId
-    private Product product;
+    @Column(name = "name", unique = true, nullable = false)
+    private String name;
+    @Column(name = "cost", nullable = false)
     private String cost;
+    @Column(name = "quantity", columnDefinition = "integer default 0")
     private Integer quantity;
 
-    public Stock(SaveProductStockDTO saveProductStockDTO, Product product) {
-        this.product = product;
+    public Stock(SaveProductStockDTO saveProductStockDTO) {
+        this.name = saveProductStockDTO.name();
         this.cost = saveProductStockDTO.cost();
         this.quantity = saveProductStockDTO.quantity();
     }
