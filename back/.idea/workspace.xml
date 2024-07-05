@@ -4,18 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc0c0ca8-93fa-4164-9e0c-f1e35da95b27" name="Changes" comment="feat: implementing interfaces and classes to ProductFactory">
+    <list default="true" id="fc0c0ca8-93fa-4164-9e0c-f1e35da95b27" name="Changes" comment="refactor: implementing productFactories">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/spoleto/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/dto/SaveProductDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/spoleto/dto/SaveProductRequestDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/factory/IngredientFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/spoleto/factory/IngredientFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/factory/PastaFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/spoleto/factory/PastaFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/factory/ProductFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/spoleto/factory/ProductFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/factory/SauceFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/spoleto/factory/SauceFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/model/Ingredient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/spoleto/model/Ingredient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/model/Pasta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/spoleto/model/Pasta.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/spoleto/model/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/model/Sauce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/spoleto/model/Sauce.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/spoleto/repository/ProductRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/spoleto/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spoleto/controller/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/factory/IngredientFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spoleto/factory/IngredientFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/factory/PastaFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spoleto/factory/PastaFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/factory/ProductFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spoleto/factory/ProductFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/factory/SauceFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spoleto/factory/SauceFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/model/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spoleto/model/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/service/ProductService$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spoleto/service/ProductService$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spoleto/service/ProductService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,9 +28,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Record" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Record" />
       </list>
     </option>
   </component>
@@ -137,7 +138,31 @@
       <option name="project" value="LOCAL" />
       <updated>1720208795072</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="refactor: changing SaveProductRequestDTO">
+      <option name="closed" value="true" />
+      <created>1720209139389</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1720209139389</updated>
+    </task>
+    <task id="LOCAL-00006" summary="refactor: implementing productFactories">
+      <option name="closed" value="true" />
+      <created>1720209154978</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1720209154978</updated>
+    </task>
+    <task id="LOCAL-00007" summary="refactor: implementing productFactories">
+      <option name="closed" value="true" />
+      <created>1720209197856</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1720209197856</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,6 +173,8 @@
     <MESSAGE value="first commit" />
     <MESSAGE value="feat: implementing save new product on stock and product" />
     <MESSAGE value="feat: implementing interfaces and classes to ProductFactory" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: implementing interfaces and classes to ProductFactory" />
+    <MESSAGE value="refactor: changing SaveProductRequestDTO" />
+    <MESSAGE value="refactor: implementing productFactories" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: implementing productFactories" />
   </component>
 </project>

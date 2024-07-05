@@ -17,7 +17,10 @@ public class Product {
     private Long id;
     @Column(name = "name", nullable = false, unique = true)
     private String name;
+    @Column(name = "price")
     private String price;
+    @Transient
+    private String dtype;
 
     public Product(SaveProductRequestDTO saveProductRequestDTO) {
         this.price = saveProductRequestDTO.price();
