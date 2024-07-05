@@ -1,6 +1,6 @@
 package com.example.spoleto.controller;
 
-import com.example.spoleto.dto.SaveProductDTO;
+import com.example.spoleto.dto.SaveProductRequestDTO;
 import com.example.spoleto.model.Product;
 import com.example.spoleto.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +21,7 @@ public class ProductController {
     }
 
     @PostMapping("/save-product")
-    public Product saveProduct(@RequestBody SaveProductDTO saveProductDTO) {
-        return productService.saveProduct(saveProductDTO);
+    public Product saveProduct(@RequestBody SaveProductRequestDTO saveProductRequestDTO) {
+        return productService.saveProduct(saveProductRequestDTO);
     }
 }

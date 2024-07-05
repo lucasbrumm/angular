@@ -1,14 +1,11 @@
 package com.example.spoleto.service;
 
-import com.example.spoleto.dto.SaveProductDTO;
+import com.example.spoleto.dto.SaveProductRequestDTO;
 import com.example.spoleto.factory.IngredientFactory;
 import com.example.spoleto.factory.PastaFactory;
 import com.example.spoleto.factory.ProductFactory;
 import com.example.spoleto.factory.SauceFactory;
-import com.example.spoleto.model.Pasta;
 import com.example.spoleto.model.Product;
-import com.example.spoleto.model.Sauce;
-import com.example.spoleto.model.Ingredient;
 import com.example.spoleto.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,13 +21,13 @@ public class ProductService {
         return productRepository.findAll();
     }
 
-    public Product saveProduct(SaveProductDTO saveProductDTO) {
-        Product product = selectClass(saveProductDTO);
+    public Product saveProduct(SaveProductRequestDTO saveProductRequestDTO) {
+        Product product = selectClass(saveProductRequestDTO);
         productRepository.save(product);
         return product;
     }
 
-    private Product selectClass(SaveProductDTO saveProductDTO) {
+    private Product selectClass(SaveProductRequestDTO saveProductDTO) {
         ProductFactory factory;
         switch (saveProductDTO.productType()) {
             case PASTA:
@@ -45,7 +42,6 @@ public class ProductService {
             default:
                 throw new IllegalArgumentException("Invalid product type");
         }
-        Product product = factory.createProduct(saveProductDTO);
-        return product;
+        return factory.createProduct(saveProductDTO);
     }
 }

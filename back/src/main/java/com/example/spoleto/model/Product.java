@@ -1,8 +1,6 @@
 package com.example.spoleto.model;
 
-import com.example.spoleto.dto.SaveProductDTO;
-import com.example.spoleto.dto.SaveProductStockDTO;
-import com.example.spoleto.model.enums.ProductType;
+import com.example.spoleto.dto.SaveProductRequestDTO;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -21,8 +19,8 @@ public class Product {
     private String name;
     private String price;
 
-    public Product(SaveProductDTO saveProductDTO) {
-        this.price = saveProductDTO.price();
-        this.name = saveProductDTO.name();
+    public Product(SaveProductRequestDTO saveProductRequestDTO) {
+        this.price = saveProductRequestDTO.price();
+        this.name = saveProductRequestDTO.name();
     }
 }

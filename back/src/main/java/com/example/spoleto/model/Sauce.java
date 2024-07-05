@@ -1,17 +1,16 @@
 package com.example.spoleto.model;
 
-import com.example.spoleto.dto.SaveProductDTO;
-import com.example.spoleto.model.enums.ProductType;
+import com.example.spoleto.dto.SaveProductRequestDTO;
 import jakarta.persistence.Entity;
 
-@Entity(name = "sauce")
+@Entity(name = "SAUCE")
 public class Sauce extends Product {
     public Sauce() {
         super();
     }
 
-    public Sauce(SaveProductDTO saveProductDTO) {
-        this.setName(saveProductDTO.name());
-        this.setPrice(saveProductDTO.price());
+    public Sauce(SaveProductRequestDTO saveProductRequestDTO) {
+        this.setName(saveProductRequestDTO.name());
+        this.setPrice(saveProductRequestDTO.price());
     }
 }
