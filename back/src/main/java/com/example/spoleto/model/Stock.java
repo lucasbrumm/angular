@@ -23,8 +23,8 @@ public class Stock {
     private String cost;
     private Integer quantity;
 
-    public Stock(SaveProductStockDTO saveProductStockDTO) {
-        this.product = new Product(saveProductStockDTO);
+    public Stock(SaveProductStockDTO saveProductStockDTO, Product product) {
+        this.product = product;
         this.cost = saveProductStockDTO.cost();
         this.quantity = saveProductStockDTO.quantity();
     }

@@ -20,7 +20,7 @@ public class StockService {
     public SaveProductStockDTO saveStockProduct(@RequestBody SaveProductStockDTO saveProductStockDTO) {
         Product newProduct = new Product(saveProductStockDTO);
         productRepository.save(newProduct);
-        Stock newProductStock = new Stock(saveProductStockDTO);
+        Stock newProductStock = new Stock(saveProductStockDTO, newProduct);
         stockRepository.save(newProductStock);
         return saveProductStockDTO;
     }

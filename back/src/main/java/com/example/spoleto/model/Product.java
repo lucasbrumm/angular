@@ -17,6 +17,7 @@ public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(name = "name", nullable = false, unique = true)
     private String name;
     private String price;
     @Enumerated(EnumType.STRING)
@@ -30,7 +31,7 @@ public class Product {
 
     public Product(SaveProductStockDTO saveProductStockDTO) {
         this.name = saveProductStockDTO.name();
-        this.price = "";
+        this.price = "0.00";
         this.productType = saveProductStockDTO.productType();
     }
 }
