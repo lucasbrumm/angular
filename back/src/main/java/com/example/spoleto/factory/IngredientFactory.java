@@ -5,7 +5,7 @@ import com.example.spoleto.model.Ingredient;
 
 public class IngredientFactory implements ProductFactory{
     @Override
-    public Ingredient createProduct(SaveProductRequestDTO saveProductDTO) {
-        return new Ingredient(saveProductDTO);
+    public Ingredient createProduct(SaveProductRequestDTO saveProductRequestDTO) {
+        return new Ingredient(saveProductRequestDTO);
     }
 }

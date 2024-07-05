@@ -6,7 +6,7 @@ import com.example.spoleto.model.Product;
 
 public class PastaFactory implements ProductFactory{
     @Override
-    public Product createProduct(SaveProductRequestDTO saveProductDTO) {
-        return new Pasta(saveProductDTO);
+    public Product createProduct(SaveProductRequestDTO saveProductRequestDTO) {
+        return new Pasta(saveProductRequestDTO);
     }
 }
