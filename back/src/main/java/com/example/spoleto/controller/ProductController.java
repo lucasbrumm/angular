@@ -1,11 +1,10 @@
 package com.example.spoleto.controller;
 
+import com.example.spoleto.dto.EditProductRequestDTO;
 import com.example.spoleto.dto.SaveProductRequestDTO;
-import com.example.spoleto.exception.ProductNameAlreadyExistsException;
 import com.example.spoleto.model.Product;
 import com.example.spoleto.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

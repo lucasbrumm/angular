@@ -1,6 +1,6 @@
 package com.example.spoleto.service;
 
-import com.example.spoleto.controller.EditProductRequestDTO;
+import com.example.spoleto.dto.EditProductRequestDTO;
 import com.example.spoleto.dto.SaveProductRequestDTO;
 import com.example.spoleto.exception.ProductNameAlreadyExistsException;
 import com.example.spoleto.factory.IngredientFactory;
