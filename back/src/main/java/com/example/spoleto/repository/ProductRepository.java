@@ -1,6 +1,6 @@
 package com.example.spoleto.repository;
 
-import com.example.spoleto.model.Product;
+import com.example.spoleto.model.product.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

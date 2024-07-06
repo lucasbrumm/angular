@@ -1,4 +1,4 @@
-package com.example.spoleto.model;
+package com.example.spoleto.model.product;
 
 import com.example.spoleto.dto.SaveProductRequestDTO;
 import jakarta.persistence.*;

@@ -3,12 +3,12 @@ package com.example.spoleto.service;
 import com.example.spoleto.dto.EditProductRequestDTO;
 import com.example.spoleto.dto.SaveProductRequestDTO;
 import com.example.spoleto.exception.ProductNameAlreadyExistsException;
-import com.example.spoleto.exception.ProductNotFoundException;
+import com.example.spoleto.exception.NotFoundException;
 import com.example.spoleto.factory.IngredientFactory;
 import com.example.spoleto.factory.PastaFactory;
 import com.example.spoleto.factory.ProductFactory;
 import com.example.spoleto.factory.SauceFactory;
-import com.example.spoleto.model.Product;
+import com.example.spoleto.model.product.Product;
 import com.example.spoleto.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -26,7 +26,7 @@ public class ProductService {
     }
 
     public Product getProductById(Long productId) {
-        Product product = productRepository.findById(productId).orElseThrow(() -> new ProductNotFoundException(
+        Product product = productRepository.findById(productId).orElseThrow(() -> new NotFoundException(
                 "Product with ID " + productId + " not found."
         ));
         product.setDtype(getDType(product));
@@ -46,7 +46,7 @@ public class ProductService {
     public Product editProduct(EditProductRequestDTO editProductRequestDTO) {
         Optional<Product> optionalProduct = productRepository.findById(editProductRequestDTO.id());
         if (optionalProduct.isEmpty()) {
-            throw new ProductNotFoundException("Product with id " + editProductRequestDTO.id() + " not exists.");
+            throw new NotFoundException("Product with id " + editProductRequestDTO.id() + " not exists.");
         }
         Product editedProduct = optionalProduct.get();
         if(productRepository.findByName(editProductRequestDTO.name()).isPresent()) {

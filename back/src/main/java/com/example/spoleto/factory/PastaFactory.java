@@ -1,8 +1,8 @@
 package com.example.spoleto.factory;
 
 import com.example.spoleto.dto.SaveProductRequestDTO;
-import com.example.spoleto.model.Pasta;
-import com.example.spoleto.model.Product;
+import com.example.spoleto.model.product.Pasta;
+import com.example.spoleto.model.product.Product;
 
 public class PastaFactory implements ProductFactory{
     @Override
