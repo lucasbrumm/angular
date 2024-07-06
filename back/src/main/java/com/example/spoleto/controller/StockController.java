@@ -33,6 +33,6 @@ public class StockController {
 
     @PostMapping("/decrement")
     public Stock decrementStock(@RequestBody EditStockRequestDTO editStockRequestDTO) {
-        return null;
+        return stockService.decrementProductStock(editStockRequestDTO);
     }
 }
