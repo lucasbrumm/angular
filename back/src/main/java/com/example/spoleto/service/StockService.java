@@ -93,6 +93,16 @@ public class StockService {
         return productStock;
     }
 
+    public void deleteProductStock(Long productStockId) {
+        Optional<Stock> optionalStock = getOptionalStockProduct(productStockId, null);
+
+        if(optionalStock.isEmpty()) {
+            throw new InvalidValueException("Product on stock with ID " + productStockId + " not found.");
+        }
+
+        stockRepository.delete(optionalStock.get());
+    }
+
     private Optional<Stock> getOptionalStockProduct(Long id, String name) {
         return id == null ? stockRepository.findByName(name) : stockRepository.findById(id);
     }

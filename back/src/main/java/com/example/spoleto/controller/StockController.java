@@ -6,6 +6,7 @@ import com.example.spoleto.model.Stock;
 import com.example.spoleto.model.product.Product;
 import com.example.spoleto.service.StockService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -44,5 +45,11 @@ public class StockController {
     @PostMapping("/increment")
     public Stock incrementStock(@RequestBody EditStockRequestDTO editStockRequestDTO) {
         return stockService.incrementStock(editStockRequestDTO);
+    }
+
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    @DeleteMapping("/{id}")
+    public void deleteStock(@PathVariable Long id) {
+        stockService.deleteProductStock(id);
     }
 }
