@@ -46,9 +46,9 @@ public class ProductService {
     public Product editProduct(EditProductRequestDTO editProductRequestDTO) {
         Optional<Product> optionalProduct = productRepository.findById(editProductRequestDTO.id());
         if (optionalProduct.isEmpty()) {
-            throw new ProductNameAlreadyExistsException("Product with id " + editProductRequestDTO.id() + " not exists.");
+            throw new ProductNotFoundException("Product with id " + editProductRequestDTO.id() + " not exists.");
         }
-        Product editedProduct = productRepository.findById(editProductRequestDTO.id()).orElseThrow();
+        Product editedProduct = optionalProduct.get();
         if(productRepository.findByName(editProductRequestDTO.name()).isPresent()) {
             throw new ProductNameAlreadyExistsException("Product with name " + editProductRequestDTO.name() + " already exists.");
         }

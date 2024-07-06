@@ -1,5 +1,6 @@
 package com.example.spoleto.controller;
 
+import com.example.spoleto.dto.EditStockRequestDTO;
 import com.example.spoleto.dto.SaveProductStockDTO;
 import com.example.spoleto.model.Product;
 import com.example.spoleto.model.Stock;
@@ -23,5 +24,15 @@ public class StockController {
     @PostMapping("/save-stock-product")
     public SaveProductStockDTO saveProductStock(@RequestBody SaveProductStockDTO saveProductStockDTO) {
         return stockService.saveStockProduct(saveProductStockDTO);
+    }
+
+    @PostMapping("/edit-cost")
+    public Stock editCost(@RequestBody EditStockRequestDTO editStockRequestDTO) {
+        return stockService.editCostProductStock(editStockRequestDTO);
+    }
+
+    @PostMapping("/decrement")
+    public Stock decrementStock(@RequestBody EditStockRequestDTO editStockRequestDTO) {
+        return null;
     }
 }
