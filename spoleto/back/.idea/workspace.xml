@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fc0c0ca8-93fa-4164-9e0c-f1e35da95b27" name="Changes" comment="feat: changind directorires" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="Class" />
+        <option value="Record" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/../.." value="develop-brum" />
+        <entry key="$PROJECT_DIR$/.." value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2ingNnezJ63HLaKaON1Ze66DCUr" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Notification.DisplayName-DoNotAsk-Lombok plugin": "Lombok integration problem",
+    "Notification.DoNotAsk-Lombok plugin": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.SpoletoApplication.executor": "Debug",
+    "git-widget-placeholder": "teste-brum",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/brum/Projects/Brum Projects/projetos-git/angular/spoleto/back",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.spoleto.exception" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="SpoletoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="spoleto" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.spoleto.SpoletoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fc0c0ca8-93fa-4164-9e0c-f1e35da95b27" name="Changes" comment="" />
+      <created>1720131718116</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1720131718116</updated>
+      <workItem from="1720131719166" duration="4031000" />
+      <workItem from="1720284702202" duration="15498000" />
+      <workItem from="1720300634604" duration="210000" />
+      <workItem from="1720300850629" duration="29000" />
+      <workItem from="1720300885618" duration="27000" />
+    </task>
+    <task id="LOCAL-00001" summary="feat: implementing service, controller, repository and entities Product, Stock">
+      <option name="closed" value="true" />
+      <created>1720135043741</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1720135043741</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: implementing service, controller, repository and entities Product, Stock">
+      <option name="closed" value="true" />
+      <created>1720135082993</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1720135082993</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: implementing save new product on stock and product">
+      <option name="closed" value="true" />
+      <created>1720205515579</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1720205515579</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: implementing interfaces and classes to ProductFactory">
+      <option name="closed" value="true" />
+      <created>1720208795072</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1720208795072</updated>
+    </task>
+    <task id="LOCAL-00005" summary="refactor: changing SaveProductRequestDTO">
+      <option name="closed" value="true" />
+      <created>1720209139389</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1720209139389</updated>
+    </task>
+    <task id="LOCAL-00006" summary="refactor: implementing productFactories">
+      <option name="closed" value="true" />
+      <created>1720209154978</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1720209154978</updated>
+    </task>
+    <task id="LOCAL-00007" summary="refactor: implementing productFactories">
+      <option name="closed" value="true" />
+      <created>1720209197856</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1720209197856</updated>
+    </task>
+    <task id="LOCAL-00008" summary="refactor: implementing exceptions">
+      <option name="closed" value="true" />
+      <created>1720212600954</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1720212600954</updated>
+    </task>
+    <task id="LOCAL-00009" summary="refactor: implementing editProduct method">
+      <option name="closed" value="true" />
+      <created>1720212620372</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1720212620372</updated>
+    </task>
+    <task id="LOCAL-00010" summary="feat: implementing exception to product not found">
+      <option name="closed" value="true" />
+      <created>1720285371205</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1720285371205</updated>
+    </task>
+    <task id="LOCAL-00011" summary="feat: implementing exception to product not found">
+      <option name="closed" value="true" />
+      <created>1720285373523</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1720285373523</updated>
+    </task>
+    <task id="LOCAL-00012" summary="feat: implementing exception to invalid value">
+      <option name="closed" value="true" />
+      <created>1720286963396</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1720286963396</updated>
+    </task>
+    <task id="LOCAL-00013" summary="feat: implementing new method to edit product stock">
+      <option name="closed" value="true" />
+      <created>1720286979286</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1720286979286</updated>
+    </task>
+    <task id="LOCAL-00014" summary="feat: implementing new exceptions InsufficientStock and InvalidValue">
+      <option name="closed" value="true" />
+      <created>1720290382738</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1720290382738</updated>
+    </task>
+    <task id="LOCAL-00015" summary="feat: implementing new exceptions InsufficientStock and InvalidValue">
+      <option name="closed" value="true" />
+      <created>1720290388361</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1720290388361</updated>
+    </task>
+    <task id="LOCAL-00016" summary="feat: implementing decrement stock methods">
+      <option name="closed" value="true" />
+      <created>1720290400366</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1720290400366</updated>
+    </task>
+    <task id="LOCAL-00017" summary="feat: implementing increment stock methods">
+      <option name="closed" value="true" />
+      <created>1720290983727</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1720290983727</updated>
+    </task>
+    <task id="LOCAL-00018" summary="feat: implementing Supplier entity, repository, controller, service and methoods, save and get">
+      <option name="closed" value="true" />
+      <created>1720294631552</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1720294631552</updated>
+    </task>
+    <task id="LOCAL-00019" summary="feat: moving entities">
+      <option name="closed" value="true" />
+      <created>1720294655673</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1720294655673</updated>
+    </task>
+    <task id="LOCAL-00020" summary="feat: adding delete product stock">
+      <option name="closed" value="true" />
+      <created>1720295429540</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1720295429540</updated>
+    </task>
+    <task id="LOCAL-00021" summary="feat: adding purchaseSupplier">
+      <option name="closed" value="true" />
+      <created>1720298550061</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1720298550061</updated>
+    </task>
+    <task id="LOCAL-00022" summary="feat: changind directorires">
+      <option name="closed" value="true" />
+      <created>1720300659682</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1720300659682</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: implementing service, controller, repository and entities Product, Stock" />
+    <MESSAGE value="first commit" />
+    <MESSAGE value="feat: implementing save new product on stock and product" />
+    <MESSAGE value="feat: implementing interfaces and classes to ProductFactory" />
+    <MESSAGE value="refactor: changing SaveProductRequestDTO" />
+    <MESSAGE value="refactor: implementing productFactories" />
+    <MESSAGE value="refactor: implementing exceptions" />
+    <MESSAGE value="refactor: implementing editProduct method" />
+    <MESSAGE value="feat: implementing exception to product not found" />
+    <MESSAGE value="feat: implementing exception to invalid value" />
+    <MESSAGE value="feat: implementing new method to edit product stock" />
+    <MESSAGE value="feat: implementing new exceptions InsufficientStock and InvalidValue" />
+    <MESSAGE value="feat: implementing decrement stock methods" />
+    <MESSAGE value="feat: implementing increment stock methods" />
+    <MESSAGE value="feat: implementing Supplier entity, repository, controller, service and methoods, save and get" />
+    <MESSAGE value="feat: moving entities" />
+    <MESSAGE value="feat: adding delete product stock" />
+    <MESSAGE value="feat: adding purchaseSupplier" />
+    <MESSAGE value="feat: changind directorires" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: changind directorires" />
+  </component>
+</project>
