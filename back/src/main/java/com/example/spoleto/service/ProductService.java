@@ -3,6 +3,7 @@ package com.example.spoleto.service;
 import com.example.spoleto.dto.EditProductRequestDTO;
 import com.example.spoleto.dto.SaveProductRequestDTO;
 import com.example.spoleto.exception.ProductNameAlreadyExistsException;
+import com.example.spoleto.exception.ProductNotFoundException;
 import com.example.spoleto.factory.IngredientFactory;
 import com.example.spoleto.factory.PastaFactory;
 import com.example.spoleto.factory.ProductFactory;
@@ -25,7 +26,9 @@ public class ProductService {
     }
 
     public Product getProductById(Long productId) {
-        Product product = productRepository.findById(productId).orElseThrow();
+        Product product = productRepository.findById(productId).orElseThrow(() -> new ProductNotFoundException(
+                "Product with ID " + productId + " not found."
+        ));
         product.setDtype(getDType(product));
         return product;
     }

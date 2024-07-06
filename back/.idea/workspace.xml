@@ -6,20 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="fc0c0ca8-93fa-4164-9e0c-f1e35da95b27" name="Changes" comment="refactor: implementing editProduct method">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/controller/EditProductRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/spoleto/dto/EditProductRequestDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/spoleto/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/controller/StockController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/spoleto/controller/StockController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/dto/SaveProductStockDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/spoleto/dto/SaveProductStockDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/model/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/spoleto/model/Stock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/repository/StockRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/spoleto/repository/StockRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/spoleto/exception/GlobalExceptionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/spoleto/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/service/StockService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/spoleto/service/StockService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spoleto/controller/ProductController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/controller/StockController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spoleto/controller/StockController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/dto/SaveProductStockDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spoleto/dto/SaveProductStockDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/model/Stock.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spoleto/model/Stock.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spoleto/service/ProductService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/service/StockService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spoleto/service/StockService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +82,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-18.0.2-corretto-18.0.2-4caba194b151-078fbf60" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
       </set>
     </attachedChunks>
   </component>
@@ -107,6 +96,7 @@
       <option name="presentableId" value="Default" />
       <updated>1720131718116</updated>
       <workItem from="1720131719166" duration="4031000" />
+      <workItem from="1720284702202" duration="620000" />
     </task>
     <task id="LOCAL-00001" summary="feat: implementing service, controller, repository and entities Product, Stock">
       <option name="closed" value="true" />
@@ -196,5 +186,16 @@
     <MESSAGE value="refactor: implementing exceptions" />
     <MESSAGE value="refactor: implementing editProduct method" />
     <option name="LAST_COMMIT_MESSAGE" value="refactor: implementing editProduct method" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/spoleto/exception/ProductNotFoundException.java</url>
+          <line>4</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
