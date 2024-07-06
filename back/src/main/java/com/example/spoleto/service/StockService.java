@@ -69,6 +69,23 @@ public class StockService {
         return productStock;
     }
 
+    public Stock incrementStock(EditStockRequestDTO editStockRequestDTO) {
+        Optional<Stock> optionalStock = getOptionalStockProduct(editStockRequestDTO.id(), null);
+        if(optionalStock.isEmpty()) {
+            throw new ProductNotFoundException("Product with id " + editStockRequestDTO.id()+ " not exists.");
+        }
+
+        Stock productStock = optionalStock.get();
+
+        if(editStockRequestDTO.value().compareTo(BigDecimal.ZERO) <= 0) {
+            throw new InvalidValueException("Invalid value " + editStockRequestDTO.value());
+        }
+
+        productStock.setQuantity(productStock.getQuantity().add(editStockRequestDTO.value()));
+        stockRepository.save(productStock);
+        return productStock;
+    }
+
     private Optional<Stock> getOptionalStockProduct(Long id, String name) {
         return id == null ? stockRepository.findByName(name) : stockRepository.findById(id);
     }

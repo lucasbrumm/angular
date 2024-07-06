@@ -35,4 +35,9 @@ public class StockController {
     public Stock decrementStock(@RequestBody EditStockRequestDTO editStockRequestDTO) {
         return stockService.decrementProductStock(editStockRequestDTO);
     }
+
+    @PostMapping("/increment")
+    public Stock incrementStock(@RequestBody EditStockRequestDTO editStockRequestDTO) {
+        return stockService.incrementStock(editStockRequestDTO);
+    }
 }
