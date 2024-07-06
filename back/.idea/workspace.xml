@@ -4,13 +4,96 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc0c0ca8-93fa-4164-9e0c-f1e35da95b27" name="Changes" comment="feat: adding delete product stock">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/controller/StockController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/spoleto/controller/StockController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/dto/SaveProductStockDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/spoleto/dto/SaveProductStockDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/service/StockService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/spoleto/service/StockService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/controller/StockController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spoleto/controller/StockController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/service/StockService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spoleto/service/StockService.class" afterDir="false" />
+    <list default="true" id="fc0c0ca8-93fa-4164-9e0c-f1e35da95b27" name="Changes" comment="feat: adding purchaseSupplier">
+      <change beforePath="$PROJECT_DIR$/.idea/back.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7a9b8211-192d-490f-b97a-4fbca9b08a92.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7a9b8211-192d-490f-b97a-4fbca9b08a92/storage_v2/_src_/database/spoleto.ZjbaiA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7a9b8211-192d-490f-b97a-4fbca9b08a92/storage_v2/_src_/database/spoleto.ZjbaiA/schema/public.abK9xQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HELP.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/SpoletoApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/controller/ProductController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/controller/PurchaseSupplier.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/controller/PurchaseSupplierController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/controller/StockController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/controller/SupplierController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/dto/EditProductRequestDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/dto/EditStockRequestDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/dto/SaveProductRequestDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/dto/SaveProductStockDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/dto/SaveSupplierRequestDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/exception/GlobalExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/exception/InsufficientStockException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/exception/InvalidValueException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/exception/NotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/exception/ProductNameAlreadyExistsException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/factory/IngredientFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/factory/PastaFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/factory/ProductFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/factory/SauceFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/model/Stock.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/model/Supplier.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/model/enums/ProductType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/model/enums/PurchaseStatus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/model/enums/StatusSupplier.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/model/product/Ingredient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/model/product/Pasta.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/model/product/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/model/product/Sauce.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/repository/ProductRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/repository/StockRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/repository/SupplierRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/service/ProductService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/service/StockService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/service/SupplierService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/spoleto/SpoletoApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/SpoletoApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/controller/ProductController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/controller/PurchaseSupplier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/controller/StockController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/controller/SupplierController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/dto/EditProductRequestDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/dto/EditStockRequestDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/dto/SaveProductRequestDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/dto/SaveProductStockDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/dto/SaveSupplierRequestDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/exception/GlobalExceptionHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/exception/InsufficientStockException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/exception/InvalidValueException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/exception/NotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/exception/ProductNameAlreadyExistsException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/factory/IngredientFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/factory/PastaFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/factory/ProductFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/factory/SauceFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/model/Stock.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/model/Supplier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/model/enums/ProductType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/model/enums/PurchaseStatus.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/model/enums/StatusSupplier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/model/product/Ingredient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/model/product/Pasta.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/model/product/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/model/product/Sauce.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/repository/ProductRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/repository/StockRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/repository/SupplierRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/service/ProductService$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/service/ProductService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/service/StockService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/service/SupplierService.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,9 +104,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Record" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
+        <option value="Record" />
       </list>
     </option>
   </component>
@@ -104,7 +187,7 @@
       <option name="presentableId" value="Default" />
       <updated>1720131718116</updated>
       <workItem from="1720131719166" duration="4031000" />
-      <workItem from="1720284702202" duration="13423000" />
+      <workItem from="1720284702202" duration="15900000" />
     </task>
     <task id="LOCAL-00001" summary="feat: implementing service, controller, repository and entities Product, Stock">
       <option name="closed" value="true" />
@@ -266,7 +349,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720295429540</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="feat: adding purchaseSupplier">
+      <option name="closed" value="true" />
+      <created>1720298550061</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1720298550061</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -290,6 +381,7 @@
     <MESSAGE value="feat: implementing Supplier entity, repository, controller, service and methoods, save and get" />
     <MESSAGE value="feat: moving entities" />
     <MESSAGE value="feat: adding delete product stock" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: adding delete product stock" />
+    <MESSAGE value="feat: adding purchaseSupplier" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: adding purchaseSupplier" />
   </component>
 </project>
