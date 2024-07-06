@@ -32,7 +32,7 @@ public class StockService {
         ));
     }
 
-    public SaveProductStockDTO saveStockProduct(@RequestBody SaveProductStockDTO saveProductStockDTO) {
+    public Stock saveStockProduct(@RequestBody SaveProductStockDTO saveProductStockDTO) {
         Optional<Stock> optionalStock = getOptionalStockProduct(null, saveProductStockDTO.name());
         if (optionalStock.isPresent()) {
             throw new ProductNameAlreadyExistsException("Product in the stock " + saveProductStockDTO.name() +
@@ -40,7 +40,7 @@ public class StockService {
         }
         Stock newProductStock = new Stock(saveProductStockDTO);
         stockRepository.save(newProductStock);
-        return saveProductStockDTO;
+        return newProductStock;
     }
 
     public Stock editCostProductStock(EditStockRequestDTO editStockRequestDTO) {

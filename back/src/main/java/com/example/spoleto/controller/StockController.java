@@ -23,7 +23,7 @@ public class StockController {
     }
 
     @PostMapping("/save-stock-product")
-    public SaveProductStockDTO saveProduct(@RequestBody SaveProductStockDTO saveProductStockDTO) {
+    public Stock saveProduct(@RequestBody SaveProductStockDTO saveProductStockDTO) {
         return stockService.saveStockProduct(saveProductStockDTO);
     }
 
