@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc0c0ca8-93fa-4164-9e0c-f1e35da95b27" name="Changes" comment="feat: changind directorires" />
+    <list default="true" id="fc0c0ca8-93fa-4164-9e0c-f1e35da95b27" name="Changes" comment="feat: changind directorires">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7a9b8211-192d-490f-b97a-4fbca9b08a92.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7a9b8211-192d-490f-b97a-4fbca9b08a92.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7a9b8211-192d-490f-b97a-4fbca9b08a92.xml.tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/controller/PurchaseSupplierController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/spoleto/controller/PurchaseSupplierController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/model/PurchaseSupplier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/spoleto/model/PurchaseSupplier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/model/rel/RelPurchaseSupplierStockQuant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/spoleto/model/rel/RelPurchaseSupplierStockQuant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/controller/PurchaseSupplierController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spoleto/controller/PurchaseSupplierController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/repository/ProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spoleto/repository/ProductRepository.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,17 +23,17 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
-        <option value="Class" />
         <option value="Record" />
+        <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/../.." value="develop-brum" />
+        <entry key="$PROJECT_DIR$/../.." value="teste-brum" />
         <entry key="$PROJECT_DIR$/.." value="main" />
       </map>
     </option>
@@ -36,6 +46,7 @@
   &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="2ingNnezJ63HLaKaON1Ze66DCUr" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -52,7 +63,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.SpoletoApplication.executor": "Debug",
-    "git-widget-placeholder": "teste-brum",
+    "git-widget-placeholder": "develop-brum",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/brum/Projects/Brum Projects/projetos-git/angular/spoleto/back",
     "node.js.detected.package.eslint": "true",
@@ -102,6 +113,8 @@
       <workItem from="1720300634604" duration="210000" />
       <workItem from="1720300850629" duration="29000" />
       <workItem from="1720300885618" duration="27000" />
+      <workItem from="1720301723943" duration="994000" />
+      <workItem from="1720302723353" duration="7064000" />
     </task>
     <task id="LOCAL-00001" summary="feat: implementing service, controller, repository and entities Product, Stock">
       <option name="closed" value="true" />
@@ -286,6 +299,9 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
     <MESSAGE value="feat: implementing service, controller, repository and entities Product, Stock" />
     <MESSAGE value="first commit" />
     <MESSAGE value="feat: implementing save new product on stock and product" />
@@ -306,5 +322,15 @@
     <MESSAGE value="feat: adding purchaseSupplier" />
     <MESSAGE value="feat: changind directorires" />
     <option name="LAST_COMMIT_MESSAGE" value="feat: changind directorires" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="11" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

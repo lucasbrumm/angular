@@ -1,9 +1,12 @@
 package com.example.spoleto.model.rel;
 
+import com.example.spoleto.dto.BuyProductStockFromSupplierRequestDTO;
 import com.example.spoleto.model.PurchaseSupplier;
 import com.example.spoleto.model.Stock;
 import jakarta.persistence.*;
 import lombok.*;
+
+import java.math.BigDecimal;
 
 @Entity
 @Table(name = "rel_purchase_supplier_stock")
@@ -23,9 +26,16 @@ public class RelPurchaseSupplierStockQuant {
 
     @ManyToOne
     @MapsId("stockId")
-    @JoinColumn(name = "stock_id", nullable = false)
+    @JoinColumn(name = "stock_product_id", nullable = false)
     private Stock stock;
 
     @Column(nullable = false)
-    private Integer quantity;
+    private BigDecimal quantity;
+
+    public RelPurchaseSupplierStockQuant(PurchaseSupplier purchaseSupplier, Stock stock, BigDecimal quantity) {
+        this.id = new PurchaseSupplierStockId();
+        this.purchaseSupplier = purchaseSupplier;
+        this.stock = stock;
+        this.quantity = quantity;
+    }
 }

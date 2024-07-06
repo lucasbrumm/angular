@@ -1,5 +1,6 @@
 package com.example.spoleto.model;
 
+import com.example.spoleto.dto.BuyProductStockFromSupplierRequestDTO;
 import com.example.spoleto.model.enums.PurchaseStatus;
 import jakarta.persistence.*;
 import lombok.*;
@@ -30,4 +31,11 @@ public class PurchaseSupplier {
 
     @Enumerated(EnumType.STRING)
     private PurchaseStatus status;
+
+    public PurchaseSupplier(BuyProductStockFromSupplierRequestDTO buyProductStockFromSupplierRequestDTO,
+                            Supplier supplier) {
+        this.purchaseDate = LocalDate.now();
+        this.status = PurchaseStatus.PENDING;
+        this.supplier = supplier;
+    }
 }
