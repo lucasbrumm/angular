@@ -1,50 +1,74 @@
 <main class="main">
   <div class="col">
-    <h4 class="mt-4">Supplier</h4>
-    <div class="row" style="margin-bottom: 20px">
-      <div class="hb-col-sm-7 col-md-2">
-        <div class="form-group col-md-12">
-          <label class="label-white">Supplier list</label>
-          <select class="custom-select form-control">
-            <option
-              *ngFor="let supplier of supplierList"
-              value="{{ supplier.id }}"
+    <form #f="ngForm" (ngSubmit)="submitOrder()">
+      <h4 class="mt-4">Supplier</h4>
+      <div class="row" style="margin-bottom: 20px">
+        <div class="hb-col-sm-7 col-md-2">
+          <div class="form-group col-md-12">
+            <label class="label-white">Supplier list</label>
+            <select
+              class="custom-select form-control"
+              (change)="onSupplierChange($event)"
             >
-              {{ supplier.name }}
-            </option>
-          </select>
+              <option value="">Select a supplier</option>
+
+              <option
+                *ngFor="let supplier of supplierList"
+                [value]="supplier.id"
+              >
+                {{ supplier.name }}
+              </option>
+            </select>
+          </div>
         </div>
       </div>
-    </div>
 
-    <h4 class="mt-4">Itens List</h4>
-    <div class="col">
-      <div class="card p-4" style="overflow: auto">
-        <table class="table table-bordered" id="dataTable" cellspacing="0">
-          <tr>
-            <th *ngFor="let columnName of columnsTable">
-              {{ columnName }}
-            </th>
-          </tr>
-          <tbody>
-            <tr *ngFor="let productStock of productStockList">
-              <td>{{ productStock.name }}</td>
-              <td>{{ productStock.cost }}</td>
-              <td>
-                <div class="col-md-4">
-                  <input type="number" class="form-control" min="0" value="1" />
-                </div>
-              </td>
-            </tr>
-          </tbody>
-          <tfoot>
+      <h4 class="mt-4">Itens List</h4>
+      <div class="col">
+        <div class="card p-4" style="overflow: auto">
+          <table class="table table-bordered" id="dataTable" cellspacing="0">
             <tr>
-              <td colspan="1">Total</td>
-              <td>0</td>
+              <th *ngFor="let columnName of columnsTable">
+                {{ columnName }}
+              </th>
             </tr>
-          </tfoot>
-        </table>
+            <tbody>
+              <tr *ngFor="let productStock of productStockList">
+                <td>{{ productStock.name }}</td>
+                <td>{{ productStock.cost }}</td>
+                <td>
+                  <div class="col-md-4">
+                    <input
+                      type="number"
+                      class="form-control"
+                      min="0"
+                      value="0"
+                      (change)="onChangeInput($event, productStock.id)"
+                    />
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="2">Total</td>
+                <td>{{ totalOrder }}</td>
+              </tr>
+            </tfoot>
+          </table>
+          <div>
+            <button
+              type="submit"
+              class="btn btn-primary mt-3"
+              [disabled]="
+                totalOrder === 0 || buyProductsFromSupplier.idSupplier === 0
+              "
+            >
+              Place an order
+            </button>
+          </div>
+        </div>
       </div>
-    </div>
+    </form>
   </div>
 </main>
