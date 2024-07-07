@@ -1,11 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormsModule, NgForm } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 import { NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
-import { OptionsMenu } from './optionsMenu';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -16,23 +15,9 @@ import { OptionsMenu } from './optionsMenu';
     NgbAlertModule,
     CommonModule,
     FormsModule,
+    RouterModule,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent {
-  optionsMenu: OptionsMenu[] = [];
-  error = '';
-
-  ngOnInit() {
-    this.addOptions(['Manage sales system', 'Manage purchasing system']);
-  }
-
-  addOptions(labels: string[]) {
-    labels.forEach((label) => {
-      let newOption = new OptionsMenu();
-      newOption.label = label;
-      this.optionsMenu.push(newOption);
-    });
-  }
-}
+export class AppComponent {}
