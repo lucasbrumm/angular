@@ -17,7 +17,7 @@ public class StockController {
     @Autowired
     StockService stockService;
 
-    @GetMapping("/")
+    @GetMapping("/get-all")
     public List<Stock> getAll() {
         return stockService.getAllProductsStock();
     }
