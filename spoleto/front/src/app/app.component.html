@@ -1,2 +1,20 @@
-<main class="main"></main>
-<router-outlet n />
+<div class="container-fluid">
+  <div class="row">
+    <!-- Barra Lateral -->
+    <div class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+      <div class="list-group">
+        <a
+          *ngFor="let option of optionsMenu"
+          [routerLink]="[option.route]"
+          class="list-group-item list-group-item-action"
+          >{{ option.label }}</a
+        >
+      </div>
+    </div>
+
+    <!-- Conteúdo Principal -->
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>

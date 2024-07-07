@@ -7,19 +7,7 @@
             <h5 class="text-center font-weight-light my-4">
               Welcome to the Spoleto system
             </h5>
-            <h5 class="text-center font-weight-light my-4">
-              Select the desired option
-            </h5>
-            <div class="card-body">
-              <button
-                *ngFor="let option of optionsMenu"
-                class="btn btn-primary d-block mb-2 w-100 py-3"
-                [routerLink]="[option.route]"
-                (click)="setFirstScreen()"
-              >
-                {{ option.label }}
-              </button>
-            </div>
+            <div class="card-body"></div>
           </div>
         </div>
       </div>

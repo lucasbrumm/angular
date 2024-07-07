@@ -19,6 +19,10 @@ export class HomeComponent {
   ngOnInit() {
     this.addOptions([
       {
+        label: 'Home',
+        route: '/',
+      },
+      {
         label: 'Manage sales system',
         route: '/sales',
       },
