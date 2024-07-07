@@ -5,6 +5,7 @@ import { RouterOutlet } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 import { NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
+import { OptionsMenu } from './optionsMenu';
 
 @Component({
   selector: 'app-root',
@@ -20,18 +21,18 @@ import { NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'front';
-  demonio = 'demonio325';
-  faCoffee = faCoffee;
-  isOpen = false;
+  optionsMenu: OptionsMenu[] = [];
   error = '';
 
-  toggleAlert() {
-    this.isOpen = !this.isOpen;
+  ngOnInit() {
+    this.addOptions(['Manage sales system', 'Manage purchasing system']);
   }
 
-  onSubmit(form: NgForm) {
-    this.error = 'ERRORRR';
-    console.log(form);
+  addOptions(labels: string[]) {
+    labels.forEach((label) => {
+      let newOption = new OptionsMenu();
+      newOption.label = label;
+      this.optionsMenu.push(newOption);
+    });
   }
 }
