@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { AuthService } from './auth.service';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { OptionsMenu } from './optionsMenu';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',

@@ -17,24 +17,7 @@ export class HomeComponent {
   constructor(private authService: AuthService) {}
 
   ngOnInit() {
-    this.addOptions([
-      {
-        label: 'Home',
-        route: '/',
-      },
-      {
-        label: 'Manage sales system',
-        route: '/sales',
-      },
-      {
-        label: 'Manage purchasing system',
-        route: '/purchase',
-      },
-      {
-        label: 'View reports',
-        route: '/reports',
-      },
-    ]);
+    this.addOptions([]);
     this.authService.fistScreenOn();
   }
 
