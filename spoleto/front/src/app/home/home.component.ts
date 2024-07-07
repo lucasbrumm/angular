@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { OptionsMenu } from '../optionsMenu';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-home',
@@ -13,6 +14,7 @@ import { RouterModule } from '@angular/router';
 export class HomeComponent {
   optionsMenu: OptionsMenu[] = [];
   error = '';
+  constructor(private authService: AuthService) {}
 
   ngOnInit() {
     this.addOptions([
@@ -24,7 +26,12 @@ export class HomeComponent {
         label: 'Manage purchasing system',
         route: '/purchase',
       },
+      {
+        label: 'View reports',
+        route: '/reports',
+      },
     ]);
+    this.authService.fistScreenOn();
   }
 
   addOptions(optionsMenu: OptionsMenu[]) {
@@ -34,5 +41,10 @@ export class HomeComponent {
       newOption.route = option.route;
       this.optionsMenu.push(newOption);
     });
+  }
+
+  setFirstScreen() {
+    this.authService.fistScreenOff();
+    console.log('asdasd');
   }
 }

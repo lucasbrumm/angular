@@ -15,6 +15,7 @@
                 *ngFor="let option of optionsMenu"
                 class="btn btn-primary d-block mb-2 w-100 py-3"
                 [routerLink]="[option.route]"
+                (click)="setFirstScreen()"
               >
                 {{ option.label }}
               </button>
