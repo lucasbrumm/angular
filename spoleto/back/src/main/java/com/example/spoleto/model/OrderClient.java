@@ -11,7 +11,6 @@ import java.time.LocalDate;
 @Table(name = "order_client")
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
 public class OrderClient {
@@ -22,4 +21,9 @@ public class OrderClient {
     private BigDecimal totalPrice;
     @Enumerated(EnumType.STRING)
     private OrderStatus orderStatus;
+
+    public OrderClient() {
+        this.orderDate = LocalDate.now();
+        this.orderStatus = OrderStatus.PENDING;
+    }
 }

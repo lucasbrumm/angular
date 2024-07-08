@@ -1,16 +1,14 @@
 package com.example.spoleto.service;
 
 import com.example.spoleto.dto.BuyProductStockFromSupplierRequestDTO;
-import com.example.spoleto.dto.BuyProductStockFromSupplierResponseDTO;
 import com.example.spoleto.dto.ChangeStatusPurchaseSupplierRequestDTO;
 import com.example.spoleto.exception.InvalidValueException;
 import com.example.spoleto.exception.InvalidValueExceptionDB;
-import com.example.spoleto.model.BuyProductStockFromSupplierResponse;
+import com.example.spoleto.dto.BuyProductStockFromSupplierResponse;
 import com.example.spoleto.model.PurchaseSupplier;
 import com.example.spoleto.model.Stock;
 import com.example.spoleto.model.Supplier;
 import com.example.spoleto.model.enums.PurchaseStatus;
-import com.example.spoleto.model.rel.PurchaseSupplierStockId;
 import com.example.spoleto.model.rel.RelPurchaseSupplierStockQuant;
 import com.example.spoleto.repository.PurchaseSupplierRepository;
 import com.example.spoleto.repository.RelPurchaseSupplierStockQuantRepository;
@@ -47,7 +45,7 @@ public class PurchaseSupplierService {
                     " not exists");
         }
 
-        PurchaseSupplier purchaseSupplier = new PurchaseSupplier(buyProductStockFromSupplierDTO, optionalSupplier.get());
+        PurchaseSupplier purchaseSupplier = new PurchaseSupplier(optionalSupplier.get());
         purchaseSupplierRepository.save(purchaseSupplier);
 
         Map<Long, BigDecimal> consolidatedQuantities = new HashMap<>();
@@ -69,11 +67,9 @@ public class PurchaseSupplierService {
         purchaseSupplier.setTotalValue(valueTotalSupplier[0]);
         purchaseSupplierRepository.save(purchaseSupplier);
 
-        BuyProductStockFromSupplierResponse buy = new BuyProductStockFromSupplierResponse(
+        return new BuyProductStockFromSupplierResponse(
                 purchaseSupplier, savedRelations
         );
-
-        return buy;
     }
 
     public List<PurchaseSupplier> getAllPurchases() {

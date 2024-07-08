@@ -31,8 +31,7 @@ public class PurchaseSupplier {
     @Enumerated(EnumType.STRING)
     private PurchaseStatus status;
 
-    public PurchaseSupplier(BuyProductStockFromSupplierRequestDTO buyProductStockFromSupplierRequestDTO,
-                            Supplier supplier) {
+    public PurchaseSupplier(Supplier supplier) {
         this.purchaseDate = LocalDate.now();
         this.status = PurchaseStatus.PENDING;
         this.supplier = supplier;

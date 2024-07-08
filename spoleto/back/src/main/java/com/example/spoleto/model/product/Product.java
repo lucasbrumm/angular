@@ -4,6 +4,8 @@ import com.example.spoleto.dto.SaveProductRequestDTO;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.math.BigDecimal;
+
 @Entity(name = "product")
 @Table(name = "product")
 @Getter
@@ -18,7 +20,7 @@ public class Product {
     @Column(name = "name", nullable = false, unique = true)
     private String name;
     @Column(name = "price")
-    private String price;
+    private BigDecimal price;
     @Transient
     private String dtype;
 

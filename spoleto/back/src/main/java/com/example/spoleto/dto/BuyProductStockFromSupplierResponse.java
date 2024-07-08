@@ -1,6 +1,6 @@
-package com.example.spoleto.model;
+package com.example.spoleto.dto;
 
-import com.example.spoleto.dto.BuyProductStockFromSupplierRequestDTO;
+import com.example.spoleto.model.PurchaseSupplier;
 import com.example.spoleto.model.enums.PurchaseStatus;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -20,7 +20,7 @@ public class BuyProductStockFromSupplierResponse {
     private LocalDate purchaseDate;
     private PurchaseStatus purchaseStatus;
     private BigDecimal totalValue;
-    private List listProducts;
+    private List<?> listProducts;
 
     public BuyProductStockFromSupplierResponse(PurchaseSupplier purchaseSupplier, List itensRelation) {
         this.purchaseId = purchaseSupplier.getId();

@@ -1,4 +1,6 @@
 package com.example.spoleto.dto;
 
-public record EditProductRequestDTO(Long id, String name, String price) {
+import java.math.BigDecimal;
+
+public record EditProductRequestDTO(Long id, String name, BigDecimal price) {
 }

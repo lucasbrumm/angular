@@ -1,6 +1,8 @@
 package com.example.spoleto.model.rel;
 
 import com.example.spoleto.model.OrderClient;
+import com.example.spoleto.model.PurchaseSupplier;
+import com.example.spoleto.model.Stock;
 import com.example.spoleto.model.product.Product;
 import jakarta.persistence.*;
 import lombok.*;
@@ -22,7 +24,7 @@ public class RelOrderClientProductQuant {
     @ManyToOne
     @MapsId("orderId")
     @JoinColumn(name = "order_id", nullable = false)
-    private OrderClient order;
+    private OrderClient orderClient;
 
     @ManyToOne
     @MapsId("productId")
@@ -31,4 +33,11 @@ public class RelOrderClientProductQuant {
 
     @Column(nullable = false)
     private BigDecimal quantity;
+
+    public RelOrderClientProductQuant(Product product, OrderClient orderClient, BigDecimal quantity) {
+        this.id = new OrderProductId();
+        this.product = product;
+        this.orderClient = orderClient;
+        this.quantity = quantity;
+    }
 }
