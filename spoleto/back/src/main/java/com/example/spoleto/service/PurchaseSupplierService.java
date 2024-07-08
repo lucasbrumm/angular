@@ -80,6 +80,7 @@ public class PurchaseSupplierService {
         return purchaseSupplierRepository.findAll();
     }
 
+    @Transactional
     public String changeStatusPurchaseSupplier(ChangeStatusPurchaseSupplierRequestDTO
                                                                changeStatusPurchaseSupplierRequestDTO) {
         Optional<PurchaseSupplier> optionalSupplier = purchaseSupplierRepository.
@@ -102,6 +103,18 @@ public class PurchaseSupplierService {
         PurchaseSupplier purchaseSupplier = optionalSupplier.get();
         purchaseSupplier.setStatus(changeStatusPurchaseSupplierRequestDTO.statusPurchase());
         purchaseSupplierRepository.save(purchaseSupplier);
+
+        var responseQueryStock = stockRepository.findStockInfoByPurchaseSupplierId(purchaseSupplier.getId());
+
+        if(changeStatusPurchaseSupplierRequestDTO.statusPurchase() == PurchaseStatus.COMPLETED &&
+                purchaseSupplier.getStatus() == PurchaseStatus.COMPLETED
+        ) {
+            responseQueryStock.forEach(item -> {
+                Stock editStock = stockRepository.findById(item.getStockProductId()).orElseThrow();
+                editStock.setQuantity(editStock.getQuantity().add(item.getQuantity()));
+                stockRepository.save(editStock);
+            });
+        }
 
         return changeStatusPurchaseSupplierRequestDTO.statusPurchase().toString();
     }
