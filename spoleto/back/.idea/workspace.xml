@@ -5,12 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc0c0ca8-93fa-4164-9e0c-f1e35da95b27" name="Changes" comment="feat: implementing changingStatusPurchaceSupplier">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7a9b8211-192d-490f-b97a-4fbca9b08a92.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7a9b8211-192d-490f-b97a-4fbca9b08a92.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7a9b8211-192d-490f-b97a-4fbca9b08a92/storage_v2/_src_/database/spoleto.ZjbaiA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7a9b8211-192d-490f-b97a-4fbca9b08a92/storage_v2/_src_/database/spoleto.ZjbaiA/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/model/Supplier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/spoleto/model/Supplier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/repository/StockRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/spoleto/repository/StockRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/service/PurchaseSupplierService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/spoleto/service/PurchaseSupplierService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/repository/StockRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spoleto/repository/StockRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/service/PurchaseSupplierService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spoleto/service/PurchaseSupplierService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/SpoletoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/spoleto/SpoletoApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/SpoletoApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spoleto/SpoletoApplication.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +65,7 @@
     &quot;Spring Boot.SpoletoApplication.executor&quot;: &quot;Debug&quot;,
     &quot;git-widget-placeholder&quot;: &quot;develop-brum&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/brum/Projects/Brum Projects/projetos-git/angular/spoleto/back&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/brum/Projects/Brum Projects/projetos-git/angular/spoleto/back/src/main/resources/db/migration&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -76,6 +79,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/db/migration" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.example.spoleto.exception" />
       <recent name="com.example.spoleto.dto" />
@@ -113,6 +119,8 @@
       <workItem from="1720300885618" duration="27000" />
       <workItem from="1720301723943" duration="994000" />
       <workItem from="1720302723353" duration="7368000" />
+      <workItem from="1720440266896" duration="1906000" />
+      <workItem from="1720442762604" duration="2439000" />
     </task>
     <task id="LOCAL-00001" summary="feat: implementing service, controller, repository and entities Product, Stock">
       <option name="closed" value="true" />
@@ -396,15 +404,5 @@
     <MESSAGE value="feat: changing patch endpoints" />
     <MESSAGE value="feat: implementing changingStatusPurchaceSupplier" />
     <option name="LAST_COMMIT_MESSAGE" value="feat: implementing changingStatusPurchaceSupplier" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.NullPointerException" package="java.lang" />
-          <option name="timeStamp" value="11" />
-        </breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
