@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { SupplierService } from '../services/supplier.service';
-import { Supplier } from '../model/supplier';
+import { StatusSupplier, Supplier } from '../model/supplier';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { Product } from '../model/product';
@@ -10,6 +10,7 @@ import { StockProduct } from '../model/stockProduct';
 import { firstValueFrom } from 'rxjs';
 import { BuyProductsFromSupplier } from '../model/buyProductsFromSupplier';
 import { FormsModule } from '@angular/forms';
+import { PurchasingService } from './purchasing.service';
 
 @Component({
   selector: 'app-purchasing',
@@ -30,7 +31,8 @@ export class PurchasingComponent {
 
   constructor(
     private supplierService: SupplierService,
-    private stockProductsService: StockProductsService
+    private stockProductsService: StockProductsService,
+    private pushasingService: PurchasingService
   ) {}
 
   ngOnInit() {
@@ -50,7 +52,10 @@ export class PurchasingComponent {
       productStockListPromise,
     ]);
 
-    this.supplierList = suppliers;
+    this.supplierList = suppliers.filter(
+      (supplier) => supplier.status === StatusSupplier.ENABLED
+    );
+
     this.productStockList = productStocks;
 
     productStocks.forEach((productStock) => {
@@ -98,7 +103,21 @@ export class PurchasingComponent {
     }
   }
 
+  getSupplierName(supplierId: number | undefined) {
+    const supplier = this.supplierList.find(
+      (supplier) => supplier.id === supplierId
+    );
+    return supplier?.name;
+  }
+
   async submitOrder() {
-    console.log(this.buyProductsFromSupplier);
+    this.pushasingService
+      .buyNewProducts(this.buyProductsFromSupplier)
+      .subscribe((res) => {
+        this.buyProductsFromSupplier?.purchases?.map((productStock) => {
+          productStock.quantity = 0;
+        });
+        this.totalOrder = 0;
+      });
   }
 }

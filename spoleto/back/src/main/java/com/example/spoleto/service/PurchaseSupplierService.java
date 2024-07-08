@@ -3,6 +3,7 @@ package com.example.spoleto.service;
 import com.example.spoleto.dto.BuyProductStockFromSupplierRequestDTO;
 import com.example.spoleto.dto.BuyProductStockFromSupplierResponseDTO;
 import com.example.spoleto.exception.InvalidValueException;
+import com.example.spoleto.model.BuyProductStockFromSupplierResponse;
 import com.example.spoleto.model.PurchaseSupplier;
 import com.example.spoleto.model.Stock;
 import com.example.spoleto.model.Supplier;
@@ -35,7 +36,7 @@ public class PurchaseSupplierService {
     StockRepository stockRepository;
 
     @Transactional
-    public BuyProductStockFromSupplierResponseDTO buyFromSupplier(BuyProductStockFromSupplierRequestDTO buyProductStockFromSupplierDTO) {
+    public BuyProductStockFromSupplierResponse buyFromSupplier(BuyProductStockFromSupplierRequestDTO buyProductStockFromSupplierDTO) {
         Optional<Supplier> optionalSupplier = supplierRepository.findById(buyProductStockFromSupplierDTO.idSupplier());
 
         if(optionalSupplier.isEmpty()) {
@@ -65,6 +66,10 @@ public class PurchaseSupplierService {
         purchaseSupplier.setTotalValue(valueTotalSupplier[0]);
         purchaseSupplierRepository.save(purchaseSupplier);
 
-        return null;
+        BuyProductStockFromSupplierResponse buy = new BuyProductStockFromSupplierResponse(
+                purchaseSupplier, savedRelations
+        );
+
+        return buy;
     }
 }

@@ -7,4 +7,5 @@ import java.time.LocalDate;
 
 public record BuyProductStockFromSupplierResponseDTO(Long purchaseId, LocalDate purchaseDate, PurchaseStatus purchaseStatus,
                                                      BigDecimal totalValue, BuyProductStockFromSupplierRequestDTO listProducts) {
+
 }

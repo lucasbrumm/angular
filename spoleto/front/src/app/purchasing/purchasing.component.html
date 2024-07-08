@@ -11,7 +11,6 @@
               (change)="onSupplierChange($event)"
             >
               <option value="">Select a supplier</option>
-
               <option
                 *ngFor="let supplier of supplierList"
                 [value]="supplier.id"
@@ -26,14 +25,17 @@
       <h4 class="mt-4">Itens List</h4>
       <div class="col">
         <div class="card p-4" style="overflow: auto">
+          <div class="mb-2">
+            <h5>{{ getSupplierName(buyProductsFromSupplier.idSupplier) }}</h5>
+          </div>
           <table class="table table-bordered" id="dataTable" cellspacing="0">
             <tr>
-              <th *ngFor="let columnName of columnsTable">
+              <th *ngFor="let columnName of columnsTable; let i = index">
                 {{ columnName }}
               </th>
             </tr>
             <tbody>
-              <tr *ngFor="let productStock of productStockList">
+              <tr *ngFor="let productStock of productStockList; let i = index">
                 <td>{{ productStock.name }}</td>
                 <td>{{ productStock.cost }}</td>
                 <td>
@@ -42,7 +44,7 @@
                       type="number"
                       class="form-control"
                       min="0"
-                      value="0"
+                      [value]="buyProductsFromSupplier.purchases?.[i]?.quantity"
                       (change)="onChangeInput($event, productStock.id)"
                     />
                   </div>

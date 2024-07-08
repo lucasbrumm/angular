@@ -9,8 +9,8 @@ export class Supplier {
   status?: StatusSupplier;
 }
 
-enum StatusSupplier {
-  ENABLED,
-  DISABLED,
-  IN_REVIEW,
+export enum StatusSupplier {
+  ENABLED = 'ENABLED',
+  DISABLED = 'DISABLED',
+  IN_REVIEW = 'IN_REVIEW',
 }
