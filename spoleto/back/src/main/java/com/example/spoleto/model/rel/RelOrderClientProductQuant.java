@@ -1,6 +1,6 @@
 package com.example.spoleto.model.rel;
 
-import com.example.spoleto.model.OrderProduct;
+import com.example.spoleto.model.OrderClient;
 import com.example.spoleto.model.product.Product;
 import jakarta.persistence.*;
 import lombok.*;
@@ -8,13 +8,13 @@ import lombok.*;
 import java.math.BigDecimal;
 
 @Entity
-@Table(name = "rel_order_product")
+@Table(name = "rel_order_client_product")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
-public class RelOrderProductQuant {
+public class RelOrderClientProductQuant {
 
     @EmbeddedId
     private OrderProductId id;
@@ -22,7 +22,7 @@ public class RelOrderProductQuant {
     @ManyToOne
     @MapsId("orderId")
     @JoinColumn(name = "order_id", nullable = false)
-    private OrderProduct order;
+    private OrderClient order;
 
     @ManyToOne
     @MapsId("productId")

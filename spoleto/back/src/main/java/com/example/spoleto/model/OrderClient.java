@@ -7,14 +7,14 @@ import lombok.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-@Entity(name = "orderproduct")
-@Table(name = "order_product")
+@Entity(name = "orderclient")
+@Table(name = "order_client")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
-public class OrderProduct {
+public class OrderClient {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
