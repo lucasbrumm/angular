@@ -1,28 +1,25 @@
 <main class="main">
   <div class="col">
-    <form #f="ngForm" (ngSubmit)="submitOrder()">
-      <h4 class="mt-4">Supplier</h4>
-      <div class="row" style="margin-bottom: 20px">
-        <div class="hb-col-sm-7 col-md-2">
-          <div class="form-group col-md-12">
-            <label class="label-white">Supplier list</label>
-            <select
-              class="custom-select form-control"
-              (change)="onSupplierChange($event)"
-            >
-              <option value="">Select a supplier</option>
-              <option
-                *ngFor="let supplier of supplierList"
-                [value]="supplier.id"
-              >
-                {{ supplier.name }}
-              </option>
-            </select>
-          </div>
+    <h4 class="mt-4">Supplier</h4>
+    <div class="row" style="margin-bottom: 20px">
+      <div class="hb-col-sm-7 col-md-2">
+        <div class="form-group col-md-12">
+          <label class="label-white">Supplier list</label>
+          <select
+            class="custom-select form-control"
+            (change)="onSupplierChange($event)"
+          >
+            <option value="">Select a supplier</option>
+            <option *ngFor="let supplier of supplierList" [value]="supplier.id">
+              {{ supplier.name }}
+            </option>
+          </select>
         </div>
       </div>
+    </div>
 
-      <h4 class="mt-4">Itens List</h4>
+    <h4 class="mt-4">Get Order from Supplier</h4>
+    <form #f="ngForm" (ngSubmit)="submitOrder()">
       <div class="col">
         <div class="card p-4" style="overflow: auto">
           <div class="mb-2">
@@ -54,7 +51,7 @@
             <tfoot>
               <tr>
                 <td colspan="2">Total</td>
-                <td>{{ totalOrder }}</td>
+                <td>$ {{ totalOrder }}</td>
               </tr>
             </tfoot>
           </table>
@@ -72,5 +69,14 @@
         </div>
       </div>
     </form>
+
+    <h4 class="mt-4">Order List</h4>
+    <div class="col">
+      <div class="card p-4" style="overflow: auto">
+        <div class="mb-2">
+          <h5>Order List</h5>
+        </div>
+      </div>
+    </div>
   </div>
 </main>

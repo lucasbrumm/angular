@@ -72,4 +72,8 @@ public class PurchaseSupplierService {
 
         return buy;
     }
+
+    public List<PurchaseSupplier> getAllPurchases() {
+        return purchaseSupplierRepository.findAll();
+    }
 }

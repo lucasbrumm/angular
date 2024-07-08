@@ -9,10 +9,12 @@ import { Supplier } from '../model/supplier';
 })
 export class SupplierService {
   url = urlBaseAPI + '/supplier';
-  constructor(private httpClient: HttpClient) {}
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
   };
+
+  constructor(private httpClient: HttpClient) {}
+
   getSupplierList(): Observable<Supplier[]> {
     return this.httpClient.get<Supplier[]>(
       this.url + '/get-all',
