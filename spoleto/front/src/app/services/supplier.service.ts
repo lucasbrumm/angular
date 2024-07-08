@@ -3,6 +3,7 @@ import { urlBaseAPI } from '../common/urlRoute';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { map, Observable } from 'rxjs';
 import { Supplier } from '../model/supplier';
+import { ChangeStatusSupplierPurchase } from '../model/changeStatusSupplierPurchase';
 
 @Injectable({
   providedIn: 'root',

@@ -3,8 +3,12 @@ import { urlBaseAPI } from '../common/urlRoute';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { BuyProductsFromSupplier } from '../model/buyProductsFromSupplier';
-import { BuyProductsFromSupplierResponse } from '../model/buyProductsFromSupplierResponse';
+import {
+  BuyProductsFromSupplierResponse,
+  PurchaseStatus,
+} from '../model/buyProductsFromSupplierResponse';
 import { PurchaseSupplier } from '../model/purchaseSupplier';
+import { ChangeStatusSupplierPurchase } from '../model/changeStatusSupplierPurchase';
 
 @Injectable({
   providedIn: 'root',
@@ -33,6 +37,16 @@ export class PurchasingService {
     return this.httpClient.get<PurchaseSupplier[]>(
       this.urlPurchase + '/get-all',
       this.httpOptions
+    );
+  }
+
+  changeStatusSupplier(
+    changeStatusSupplierPurchase: ChangeStatusSupplierPurchase
+  ): Observable<PurchaseStatus> {
+    return this.httpClient.post<PurchaseStatus>(
+      this.urlPurchase + '/change-status',
+      changeStatusSupplierPurchase,
+      { ...this.httpOptions, responseType: 'text' as 'json' }
     );
   }
 }

@@ -12,6 +12,7 @@ import { BuyProductsFromSupplier } from '../model/buyProductsFromSupplier';
 import { FormsModule } from '@angular/forms';
 import { PurchasingService } from './purchasing.service';
 import { PurchaseSupplier } from '../model/purchaseSupplier';
+import { ChangeStatusSupplierPurchase } from '../model/changeStatusSupplierPurchase';
 
 @Component({
   selector: 'app-purchasing',
@@ -36,6 +37,7 @@ export class PurchasingComponent {
     'Total Value',
     'Status',
   ];
+  optionPuchaseStatus: string[] = ['PENDING', 'COMPLETED', 'CANCELLED'];
   totalOrder = 0;
 
   constructor(
@@ -143,6 +145,24 @@ export class PurchasingComponent {
         };
         this.purchaseSupplierList.push(newOrder);
         this.totalOrder = 0;
+      });
+  }
+
+  onChangeStatus(event: any, purchaseId?: number) {
+    const status = event.target.value;
+    const changeStatusSupplierPurchase: ChangeStatusSupplierPurchase = {
+      idSupplierPurchase: purchaseId,
+      statusPurchase: status,
+    };
+    this.pushasingService
+      .changeStatusSupplier(changeStatusSupplierPurchase)
+      .subscribe((res) => {
+        const purchase = this.purchaseSupplierList.find(
+          (purchase) => purchase.id === purchaseId
+        );
+        if (purchase) {
+          purchase.status = res;
+        }
       });
   }
 }

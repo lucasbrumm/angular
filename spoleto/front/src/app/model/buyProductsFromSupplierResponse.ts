@@ -11,5 +11,5 @@ export class BuyProductsFromSupplierResponse {
 export enum PurchaseStatus {
   PENDING = 'PENDING',
   COMPLETED = 'COMPLETED',
-  CANCELED = 'CANCELED',
+  CANCELED = 'CANCELLED',
 }

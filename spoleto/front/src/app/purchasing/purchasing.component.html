@@ -5,10 +5,7 @@
       <div class="hb-col-sm-7 col-md-2">
         <div class="form-group col-md-12">
           <label class="label-white">Supplier list</label>
-          <select
-            class="custom-select form-control"
-            (change)="onSupplierChange($event)"
-          >
+          <select class="btn btn-white" (change)="onSupplierChange($event)">
             <option value="">Select a supplier</option>
             <option *ngFor="let supplier of supplierList" [value]="supplier.id">
               {{ supplier.name }}
@@ -101,7 +98,22 @@
                 <td>{{ purchase.supplier?.name }}</td>
                 <td>{{ purchase.purchaseDate }}</td>
                 <td>{{ purchase.totalValue }}</td>
-                <td>{{ purchase.status }}</td>
+                <!-- <td>{{ purchase.status }}</td> -->
+                <td>
+                  <select
+                    class="btn btn-white"
+                    [(ngModel)]="purchase.status"
+                    disabled="{{
+                      purchase.status === 'COMPLETED' ||
+                        purchase.status === 'CANCELLED'
+                    }}"
+                    (change)="onChangeStatus($event, purchase.id)"
+                  >
+                    <option *ngFor="let option of optionPuchaseStatus">
+                      {{ option }}
+                    </option>
+                  </select>
+                </td>
               </tr>
             </tbody>
           </table>
