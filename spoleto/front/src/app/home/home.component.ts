@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { OptionsMenu } from '../optionsMenu';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { AuthService } from '../auth.service';
+import { OptionsMenu } from '../model/optionsMenu';
 
 @Component({
   selector: 'app-home',
