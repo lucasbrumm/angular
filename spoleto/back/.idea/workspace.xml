@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc0c0ca8-93fa-4164-9e0c-f1e35da95b27" name="Changes" comment="feat: creating OrderClient Repository, Serevice and controller">
+    <list default="true" id="fc0c0ca8-93fa-4164-9e0c-f1e35da95b27" name="Changes" comment="feat: implementing sell method">
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/spoleto/controller/OrderClientController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/spoleto/dto/SellProductRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/spoleto/dto/SellProductResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/spoleto/repository/RelOrderClientProductQuantRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/controller/OrderProductController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/controller/PurchaseSupplierController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/spoleto/controller/PurchaseSupplierController.java" afterDir="false" />
@@ -24,6 +27,19 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/service/OrderClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/spoleto/service/OrderClientService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spoleto/service/PurchaseSupplierService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/spoleto/service/PurchaseSupplierService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V1__insert-product-table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V1__insert-product-table.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/controller/PurchaseSupplierController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spoleto/controller/PurchaseSupplierController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/dto/BuyProductStockFromSupplierRequestDTO$ProductPurchase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spoleto/dto/BuyProductStockFromSupplierRequestDTO$ProductPurchase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/dto/BuyProductStockFromSupplierRequestDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spoleto/dto/BuyProductStockFromSupplierRequestDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/dto/EditProductRequestDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spoleto/dto/EditProductRequestDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/dto/SaveProductRequestDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spoleto/dto/SaveProductRequestDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/model/PurchaseSupplier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spoleto/model/PurchaseSupplier.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/model/product/Ingredient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spoleto/model/product/Ingredient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/model/product/Pasta.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spoleto/model/product/Pasta.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/model/product/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spoleto/model/product/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/model/product/Sauce.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spoleto/model/product/Sauce.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/repository/ProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spoleto/repository/ProductRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spoleto/service/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/spoleto/service/PurchaseSupplierService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/spoleto/service/PurchaseSupplierService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +147,7 @@
       <workItem from="1720302723353" duration="7368000" />
       <workItem from="1720440266896" duration="1906000" />
       <workItem from="1720442762604" duration="4760000" />
-      <workItem from="1720464305582" duration="8682000" />
+      <workItem from="1720464305582" duration="9031000" />
     </task>
     <task id="LOCAL-00001" summary="feat: implementing service, controller, repository and entities Product, Stock">
       <option name="closed" value="true" />
@@ -413,7 +429,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720465851105</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="feat: implementing sell method">
+      <option name="closed" value="true" />
+      <created>1720473336956</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1720473336956</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -423,7 +447,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
-    <MESSAGE value="feat: implementing save new product on stock and product" />
     <MESSAGE value="feat: implementing interfaces and classes to ProductFactory" />
     <MESSAGE value="refactor: changing SaveProductRequestDTO" />
     <MESSAGE value="refactor: implementing productFactories" />
@@ -448,6 +471,7 @@
     <MESSAGE value="feat: creating OrderProduct and RelOrderProduct" />
     <MESSAGE value="feat: creating OrderClient and RelOrderClient" />
     <MESSAGE value="feat: creating OrderClient Repository, Serevice and controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: creating OrderClient Repository, Serevice and controller" />
+    <MESSAGE value="feat: implementing sell method" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: implementing sell method" />
   </component>
 </project>
