@@ -2,11 +2,14 @@ package com.example.spoleto.service;
 
 import com.example.spoleto.dto.BuyProductStockFromSupplierRequestDTO;
 import com.example.spoleto.dto.BuyProductStockFromSupplierResponseDTO;
+import com.example.spoleto.dto.ChangeStatusPurchaseSupplierRequestDTO;
 import com.example.spoleto.exception.InvalidValueException;
+import com.example.spoleto.exception.InvalidValueExceptionDB;
 import com.example.spoleto.model.BuyProductStockFromSupplierResponse;
 import com.example.spoleto.model.PurchaseSupplier;
 import com.example.spoleto.model.Stock;
 import com.example.spoleto.model.Supplier;
+import com.example.spoleto.model.enums.PurchaseStatus;
 import com.example.spoleto.model.rel.PurchaseSupplierStockId;
 import com.example.spoleto.model.rel.RelPurchaseSupplierStockQuant;
 import com.example.spoleto.repository.PurchaseSupplierRepository;
@@ -75,5 +78,31 @@ public class PurchaseSupplierService {
 
     public List<PurchaseSupplier> getAllPurchases() {
         return purchaseSupplierRepository.findAll();
+    }
+
+    public String changeStatusPurchaseSupplier(ChangeStatusPurchaseSupplierRequestDTO
+                                                               changeStatusPurchaseSupplierRequestDTO) {
+        Optional<PurchaseSupplier> optionalSupplier = purchaseSupplierRepository.
+                findById(changeStatusPurchaseSupplierRequestDTO.idSupplierPurchase());
+
+        if(optionalSupplier.isEmpty()) {
+            throw new InvalidValueException("Supplier Purchase with ID " +
+                    changeStatusPurchaseSupplierRequestDTO.idSupplierPurchase() +
+                    " not exists");
+        }
+
+        if(optionalSupplier.get().getStatus() == PurchaseStatus.COMPLETED) {
+            throw new InvalidValueExceptionDB("Can't change a purchase COMPLETED");
+        }
+
+        if(optionalSupplier.get().getStatus() == PurchaseStatus.CANCELLED) {
+            throw new InvalidValueExceptionDB("Can't change a purchase CANCELLED");
+        }
+
+        PurchaseSupplier purchaseSupplier = optionalSupplier.get();
+        purchaseSupplier.setStatus(changeStatusPurchaseSupplierRequestDTO.statusPurchase());
+        purchaseSupplierRepository.save(purchaseSupplier);
+
+        return changeStatusPurchaseSupplierRequestDTO.statusPurchase().toString();
     }
 }

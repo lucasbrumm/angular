@@ -26,4 +26,9 @@ public class GlobalExceptionHandler {
     public ResponseEntity<String> handleInsufficientStock(InsufficientStockException e) {
         return new ResponseEntity<>(e.getMessage(), HttpStatus.CONFLICT);
     }
+
+    @ExceptionHandler(InvalidValueExceptionDB.class)
+    public ResponseEntity<String> handleInvalidValueDB(InvalidValueExceptionDB e) {
+        return new ResponseEntity<>(e.getMessage(), HttpStatus.UNPROCESSABLE_ENTITY);
+    }
 }
