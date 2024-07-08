@@ -26,11 +26,16 @@
             <h5>{{ getSupplierName(buyProductsFromSupplier.idSupplier) }}</h5>
           </div>
           <table class="table table-bordered" id="dataTable" cellspacing="0">
-            <tr>
-              <th *ngFor="let columnName of columnsTable; let i = index">
-                {{ columnName }}
-              </th>
-            </tr>
+            <thead>
+              <tr>
+                <th
+                  *ngFor="let columnName of columnsTableGetOrder; let i = index"
+                >
+                  {{ columnName }}
+                </th>
+              </tr>
+            </thead>
+
             <tbody>
               <tr *ngFor="let productStock of productStockList; let i = index">
                 <td>{{ productStock.name }}</td>
@@ -48,6 +53,7 @@
                 </td>
               </tr>
             </tbody>
+
             <tfoot>
               <tr>
                 <td colspan="2">Total</td>
@@ -75,6 +81,30 @@
       <div class="card p-4" style="overflow: auto">
         <div class="mb-2">
           <h5>Order List</h5>
+          <table class="table table-bordered" id="dataTable" cellspacing="0">
+            <thead>
+              <tr>
+                <th
+                  *ngFor="
+                    let columnName of columnsTableOrderList;
+                    let i = index
+                  "
+                >
+                  {{ columnName }}
+                </th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr *ngFor="let purchase of purchaseSupplierList; let i = index">
+                <td>{{ purchase.id }}</td>
+                <td>{{ purchase.supplier?.name }}</td>
+                <td>{{ purchase.purchaseDate }}</td>
+                <td>{{ purchase.totalValue }}</td>
+                <td>{{ purchase.status }}</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>

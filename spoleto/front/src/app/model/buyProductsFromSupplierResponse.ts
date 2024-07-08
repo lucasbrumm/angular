@@ -8,7 +8,7 @@ export class BuyProductsFromSupplierResponse {
   listProducts?: BuyProductsFromSupplier;
 }
 
-enum PurchaseStatus {
+export enum PurchaseStatus {
   PENDING = 'PENDING',
   COMPLETED = 'COMPLETED',
   CANCELED = 'CANCELED',

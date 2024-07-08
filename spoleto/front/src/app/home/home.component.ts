@@ -32,6 +32,5 @@ export class HomeComponent {
 
   setFirstScreen() {
     this.authService.fistScreenOff();
-    console.log('asdasd');
   }
 }

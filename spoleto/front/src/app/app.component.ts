@@ -7,8 +7,9 @@ import { NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 import { AuthService } from './auth.service';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-import { OptionsMenu } from './optionsMenu';
 import { HttpClientModule } from '@angular/common/http';
+import { OptionsMenu } from './model/optionsMenu';
+import { MENU_OPTIONS } from './common/optionsMenu';
 
 @Component({
   selector: 'app-root',
@@ -29,24 +30,7 @@ export class AppComponent {
   optionsMenu: OptionsMenu[] = [];
 
   ngOnInit() {
-    this.addOptions([
-      {
-        label: 'Home',
-        route: '/',
-      },
-      {
-        label: 'Manage sales system',
-        route: '/sales',
-      },
-      {
-        label: 'Manage purchasing system',
-        route: '/purchase',
-      },
-      {
-        label: 'View reports',
-        route: '/reports',
-      },
-    ]);
+    this.addOptions(MENU_OPTIONS);
   }
 
   addOptions(optionsMenu: OptionsMenu[]) {

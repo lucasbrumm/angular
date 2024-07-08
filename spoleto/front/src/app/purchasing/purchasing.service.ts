@@ -4,6 +4,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { BuyProductsFromSupplier } from '../model/buyProductsFromSupplier';
 import { BuyProductsFromSupplierResponse } from '../model/buyProductsFromSupplierResponse';
+import { PurchaseSupplier } from '../model/purchaseSupplier';
 
 @Injectable({
   providedIn: 'root',
@@ -26,5 +27,12 @@ export class PurchasingService {
         this.httpOptions
       )
       .pipe((data) => data);
+  }
+
+  getAllOrdersFromSupplier(): Observable<PurchaseSupplier[]> {
+    return this.httpClient.get<PurchaseSupplier[]>(
+      this.urlPurchase + '/get-all',
+      this.httpOptions
+    );
   }
 }

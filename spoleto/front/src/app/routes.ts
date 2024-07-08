@@ -3,6 +3,7 @@ import { HomeComponent } from './home/home.component';
 import { PurchasingComponent } from './purchasing/purchasing.component';
 import { SalesComponent } from './sales/sales.component';
 import { ReportsComponent } from './reports/reports.component';
+import { StockComponent } from './stock/stock.component';
 
 const routeConfig: Routes = [
   {
@@ -24,6 +25,11 @@ const routeConfig: Routes = [
     path: 'reports',
     component: ReportsComponent,
     title: 'Reports',
+  },
+  {
+    path: 'stock',
+    component: StockComponent,
+    title: 'Stock',
   },
 ];
 

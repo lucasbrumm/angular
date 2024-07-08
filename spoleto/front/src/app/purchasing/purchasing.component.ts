@@ -11,6 +11,7 @@ import { firstValueFrom } from 'rxjs';
 import { BuyProductsFromSupplier } from '../model/buyProductsFromSupplier';
 import { FormsModule } from '@angular/forms';
 import { PurchasingService } from './purchasing.service';
+import { PurchaseSupplier } from '../model/purchaseSupplier';
 
 @Component({
   selector: 'app-purchasing',
@@ -22,11 +23,19 @@ import { PurchasingService } from './purchasing.service';
 export class PurchasingComponent {
   supplierList: Supplier[] = [];
   productStockList: StockProduct[] = [];
-  columnsTable: string[] = ['Item Name', 'Price ($)', 'Quantity (KG)'];
+  purchaseSupplierList: PurchaseSupplier[] = [];
   buyProductsFromSupplier: BuyProductsFromSupplier = {
     idSupplier: 0,
     purchases: [],
   };
+  columnsTableGetOrder: string[] = ['Item Name', 'Price ($)', 'Quantity (KG)'];
+  columnsTableOrderList: string[] = [
+    'Id',
+    'Supplier',
+    'Date',
+    'Total Value',
+    'Status',
+  ];
   totalOrder = 0;
 
   constructor(
@@ -47,16 +56,21 @@ export class PurchasingComponent {
       this.stockProductsService.getAllStockProducts()
     );
 
-    const [suppliers, productStocks] = await Promise.all([
+    const purchaseSupplierListPromise = firstValueFrom(
+      this.pushasingService.getAllOrdersFromSupplier()
+    );
+
+    const [suppliers, productStocks, purchaseSupplier] = await Promise.all([
       supplierListPromise,
       productStockListPromise,
+      purchaseSupplierListPromise,
     ]);
 
     this.supplierList = suppliers.filter(
       (supplier) => supplier.status === StatusSupplier.ENABLED
     );
-
     this.productStockList = productStocks;
+    this.purchaseSupplierList = purchaseSupplier;
 
     productStocks.forEach((productStock) => {
       if (this.buyProductsFromSupplier.purchases !== undefined)
@@ -117,6 +131,17 @@ export class PurchasingComponent {
         this.buyProductsFromSupplier?.purchases?.map((productStock) => {
           productStock.quantity = 0;
         });
+        const newOrder = {
+          id: res.purchaseId,
+          supplier: this.supplierList.find(
+            (supplier) =>
+              supplier.id === this.buyProductsFromSupplier.idSupplier
+          ),
+          purchaseDate: res.purchaseDate,
+          totalValue: res.totalValue,
+          status: res.purchaseStatus,
+        };
+        this.purchaseSupplierList.push(newOrder);
         this.totalOrder = 0;
       });
   }
